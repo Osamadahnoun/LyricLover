@@ -1,0 +1,50 @@
+#form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 90px;
+    margin: 50px;
+    background-color: hsl(204, 86%, 53%);
+    border-radius: 12px;
+}
+
+#name {
+    font-weight: bolder;
+    color: white;
+    font-size: xx-large;
+}
+#input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+}
+
+.song {
+    background-color: hsl(204, 86%, 53%);
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    padding: 5px;
+    position: relative;
+    top: 50px;
+}
+
+
+#genres {
+  padding-left: 175px;
+}
+
+.buttondiv {
+    margin-bottom: 20px;
+}
+
+
+
+
+

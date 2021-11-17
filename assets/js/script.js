@@ -1,7 +1,8 @@
+// Global Variables for submit button element/song title container element/input element
 var submitBtn = document.querySelector('#submitBtn');
 var container = document.querySelector('#container');
 var input = document.querySelector('#input');
-
+// Global Variables for each individual song element
 var Song1El = document.querySelector('#song1');
 var Song2El = document.querySelector('#song2');
 var Song3El = document.querySelector('#song3');
@@ -13,6 +14,7 @@ var Song8El = document.querySelector('#song8');
 var Song9El = document.querySelector('#song9');
 var Song10El = document.querySelector('#song10');
 
+// This function fetches data from API and prints it to screen through changing each song elements text content 
 var getArtistSongs = function(firstName) {
     var apiUrl = 'https://theaudiodb.p.rapidapi.com/track-top10.php?s=' + firstName
     fetch(apiUrl, {
@@ -51,6 +53,7 @@ var getArtistSongs = function(firstName) {
     }) 
 }
 
+// This functiion gives the button element functionality to run the getArtistSongs with the input.value parameter. It also clears the previous inputs song names
 var inputArtistName = function() {
     submitBtn.addEventListener('click', function() {
         Song1El.textContent = 'Song Title 1'

@@ -1,5 +1,6 @@
 var submitBtn = document.querySelector('#submitBtn');
 var container = document.querySelector('#container');
+var input = document.querySelector('#input');
 
 var Song1El = document.querySelector('#song1');
 var Song2El = document.querySelector('#song2');
@@ -24,6 +25,7 @@ var getArtistSongs = function(firstName) {
     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
+                // console.log(data.track.length)
                 var song1 = data.track[0].strTrack
                 Song1El.textContent = song1
                 var song2 = data.track[1].strTrack
@@ -48,4 +50,15 @@ var getArtistSongs = function(firstName) {
         }
     }) 
 }
-getArtistSongs('drake');
+
+var inputArtistName = function() {
+    submitBtn.addEventListener('click', function() {
+        getArtistSongs(input.value);
+    })
+
+}
+
+inputArtistName();
+
+
+

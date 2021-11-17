@@ -42,11 +42,17 @@ body {
 }
 
 .rightSection {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.songColumn {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    
     
 }
 

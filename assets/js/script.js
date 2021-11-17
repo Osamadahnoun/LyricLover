@@ -53,6 +53,16 @@ var getArtistSongs = function(firstName) {
 
 var inputArtistName = function() {
     submitBtn.addEventListener('click', function() {
+        Song1El.textContent = 'Song Title 1'
+        Song2El.textContent = 'Song Title 2'
+        Song3El.textContent = 'Song Title 3'
+        Song4El.textContent = 'Song Title 4'
+        Song5El.textContent = 'Song Title 5'
+        Song6El.textContent = 'Song Title 6'
+        Song7El.textContent = 'Song Title 7'
+        Song8El.textContent = 'Song Title 8'
+        Song9El.textContent = 'Song Title 9'
+        Song10El.textContent = 'Song Title 10'
         getArtistSongs(input.value);
     })
 

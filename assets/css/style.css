@@ -6,6 +6,7 @@ html,
 body {
     margin: 0;
     height: 100%;
+    
 }
 
 .hero {
@@ -97,3 +98,35 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background: var(--primary-color);
+    color: white;
+    bottom:0px;
+    width:100%;
+    height: 100px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 460px) {
+    
+#footer {
+display: flex;
+flex-wrap: wrap;
+position: relative;
+bottom:0px;
+width:100%;
+background: var(--primary-color); 
+  }
+}
+
+
+

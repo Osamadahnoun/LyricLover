@@ -8,6 +8,10 @@ body {
     height: 100%;
 }
 
+.hero {
+    background-color: var(--primary-color);
+}
+
 .main {
     display: flex;
 }
@@ -16,6 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    justify-content: space-between;
+    
 }
 
 #inputSection {
@@ -41,10 +47,23 @@ body {
     margin-bottom: 20px;
 }
 
+#genresContainer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+}
+
 .rightSection {
     display: flex;
     width: 50%;
     justify-content: space-evenly;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px 20px 20px 0;
+    align-items: center;
 }
 
 .songColumn {
@@ -57,9 +76,8 @@ body {
 }
 
 .song {
-    background-color: var(--primary-color);
     color: white;
-    border-radius: 12px;
+    border-radius: 5px;
     padding: 5px;
     margin-top: 20px;
 }

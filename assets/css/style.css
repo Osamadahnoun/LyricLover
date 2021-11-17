@@ -1,3 +1,5 @@
+
+
 #LeftSection {
     display: inline-flex;
     flex-direction: column;
@@ -25,13 +27,12 @@
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: absolute;
+    position:absolute;
 }
 
 .song {
     background-color: hsl(204, 86%, 53%);
     color: white;
-    margin-bottom: 10px;
     border-radius: 12px;
     padding: 5px;
     margin-top: 50px ;

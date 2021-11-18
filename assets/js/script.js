@@ -2,6 +2,8 @@
 var submitBtn = document.querySelector('#submitBtn');
 var container = document.querySelector('#container');
 var input = document.querySelector('#input');
+var albums = document.querySelector('#album')
+var trendingEl = document.querySelector('#trend')
 // Global Variables for each individual song element
 var Song1El = document.querySelector('#song1');
 var Song2El = document.querySelector('#song2');
@@ -13,6 +15,8 @@ var Song7El = document.querySelector('#song7');
 var Song8El = document.querySelector('#song8');
 var Song9El = document.querySelector('#song9');
 var Song10El = document.querySelector('#song10');
+
+
 
 // This function fetches data from API and prints it to screen through changing each song elements text content 
 var getArtistSongs = function(firstName) {
@@ -53,23 +57,6 @@ var getArtistSongs = function(firstName) {
     }) 
 }
 
-// This functiion gives the button element functionality to run the getArtistSongs with the input.value parameter. It also clears the previous inputs song names
-var inputArtistName = function() {
-    submitBtn.addEventListener('click', function() {
-        Song1El.textContent = 'Song Title 1'
-        Song2El.textContent = 'Song Title 2'
-        Song3El.textContent = 'Song Title 3'
-        Song4El.textContent = 'Song Title 4'
-        Song5El.textContent = 'Song Title 5'
-        Song6El.textContent = 'Song Title 6'
-        Song7El.textContent = 'Song Title 7'
-        Song8El.textContent = 'Song Title 8'
-        Song9El.textContent = 'Song Title 9'
-        Song10El.textContent = 'Song Title 10'
-        getArtistSongs(input.value);
-    })
-
-}
 
 var topAlbums = function() {
     fetch("https://theaudiodb.p.rapidapi.com/mostloved.php?format=album", {
@@ -84,61 +71,136 @@ var topAlbums = function() {
         response.json().then(function(data) {
             var album1 = data.loved[0].strAlbum
             var artist1 = data.loved[0].strArtist
-            console.log(album1)
-            console.log(artist1)
             var album2 = data.loved[1].strAlbum
             var artist2 = data.loved[1].strArtist
-            console.log(album2)
-            console.log(artist2)
             var album3 = data.loved[2].strAlbum
             var artist3 = data.loved[2].strArtist
-            console.log(album3)
-            console.log(artist3)
             var album4 = data.loved[3].strAlbum
             var artist4 = data.loved[3].strArtist
-            console.log(album4)
-            console.log(artist4)
             var album5 = data.loved[4].strAlbum
             var artist5 = data.loved[4].strArtist
-            console.log(album5)
-            console.log(artist5)
             var album6 = data.loved[5].strAlbum
             var artist6 = data.loved[5].strArtist
-            console.log(album6)
-            console.log(artist6)
             var album7 = data.loved[6].strAlbum
             var artist7 = data.loved[6].strArtist
-            console.log(album7)
-            console.log(artist7)
             var album8 = data.loved[7].strAlbum
             var artist8 = data.loved[7].strArtist
-            console.log(album8)
-            console.log(artist8)
             var album9 = data.loved[8].strAlbum
             var artist9 = data.loved[8].strArtist
-            console.log(album9)
-            console.log(artist9)
             var album10 = data.loved[9].strAlbum
             var artist10 = data.loved[9].strArtist
-            console.log(album10)
-            console.log(artist10)
-            Song1El.textContent = "Art"
-            // Song2El.textContent = song2
-            // Song3El.textContent = song3
-            // Song4El.textContent = song4
-            // Song5El.textContent = song5
-            // Song6El.textContent = song6
-            // Song7El.textContent = song7
-            // Song8El.textContent = song8
-            // Song9El.textContent = song9
-            // Song10El.textContent = song10
+            
+            Song1El.textContent = "1. Artist: " + artist1 + ", Album: " + album1;
+            Song2El.textContent = "2. Artist: " + artist2 + ", Album: " + album2;
+            Song3El.textContent = "3. Artist: " + artist3 + ", Album: " + album3;
+            Song4El.textContent = "4. Artist: " + artist4 + ", Album: " + album4;
+            Song5El.textContent = "5. Artist: " + artist5 + ", Album: " + album5;
+            Song6El.textContent = "6. Artist: " + artist6 + ", Album: " + album6;
+            Song7El.textContent = "7. Artist: " + artist7 + ", Album: " + album7;
+            Song8El.textContent = "8. Artist: " + artist8 + ", Album: " + album8;
+            Song9El.textContent = "9. Artist: " + artist9 + ", Album: " + album9;
+            Song10El.textContent = "10. Artist: " + artist10 + ", Album: " + album10;
+           
 })
     }
 }) 
 }
 
-topAlbums();
+var trending = function() {
+    fetch("https://theaudiodb.p.rapidapi.com/trending.php?country=us&type=itunes&format=singles", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "theaudiodb.p.rapidapi.com",
+		"x-rapidapi-key": "ef46e6a41amshf3c1a1224464392p1c3b64jsnd05e7e63b5ee"
+	}
+})     .then(function(response) {
+        if(response.ok) {
+            response.json().then(function(data) {
+                var track1 = data.trending[0].strTrack
+                var artist1 = data.trending[0].strArtist
+                var track2 = data.trending[1].strTrack
+                var artist2 = data.trending[1].strArtist
+                var track3 = data.trending[2].strTrack
+                var artist3 = data.trending[2].strArtist
+                var track4 = data.trending[3].strTrack
+                var artist4 = data.trending[3].strArtist
+                var track5 = data.trending[4].strTrack
+                var artist5 = data.trending[4].strArtist
+
+            Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            Song7El.textContent = "7. Artist: " + artist7 + ", Track: " + track7;
+            Song8El.textContent = "8. Artist: " + artist8 + ", Track: " + track8;
+            Song9El.textContent = "9. Artist: " + artist9 + ", Track: " + track9;
+            Song10El.textContent = "10. Artist: " + artist10 + ", Track: " + track10;
+    })
+        }
+    }) 
+}
+
+var topAlbumsButton = function() {
+    albums.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
+        topAlbums();
+    })
+}
+
+var trendingButton = function() {
+    trendingEl.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
+        trending();
+    })
+}
+
+
+
+// This functiion gives the button element functionality to run the getArtistSongs with the input.value parameter. It also clears the previous inputs song names
+var inputArtistName = function() {
+    submitBtn.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
+        getArtistSongs(input.value);
+    })
+
+}
 
 
 inputArtistName();
+
+topAlbumsButton();
+
+trendingButton();
+
+
+
 

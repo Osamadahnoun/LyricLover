@@ -31,7 +31,7 @@ var getArtistSongs = function(firstName) {
                 // console.log(data.track.length)
                 var song1 = data.track[0].strTrack
                 Song1El.textContent = song1
-                Song1El.setAttribute("href", "./single.html?artist=metallica&song=and justice for all");
+                Song1El.setAttribute("href", "./single.html?artist=metallica&song=enter sandman");
                 var song2 = data.track[1].strTrack
                 Song2El.textContent = song2
                 var song3 = data.track[2].strTrack

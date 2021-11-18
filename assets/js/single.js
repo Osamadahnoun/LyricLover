@@ -7,7 +7,8 @@ var getInfo = function() {
   var artist= urlParams.get("artist");
   var song = urlParams.get("song");
 
-  titleEl.innerHTML = artist+"/"+song;
+
+  titleEl.innerHTML = (artist+"/"+song).toUpperCase();
 
   if (artist && song) {
     getLyrics(artist, song);
@@ -25,8 +26,12 @@ var getLyrics = function(artist, song) {
     })
     .then(function(data){
       var lyrics = data.mus[0].text;
+      var find = lyrics.replaceAll("\n","<br>");
+      console.log(lyrics)
       var lyricsEl = document.createElement("p");
-      lyricsEl.textContent = lyrics;
+      lyricsEl.classList ="lyrics";
+      lyricsEl.innerHTML = find;
+      console.log(lyricsEl)
       containerEl.appendChild(lyricsEl);
     })    
 }

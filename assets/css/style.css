@@ -114,6 +114,23 @@ body {
     font-size: 22px
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.lyrics {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 460px) {

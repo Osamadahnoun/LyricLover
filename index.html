@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LyricLover</title>
+    <link rel="styleheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="hero is-info has-text-centered">
+        <div class="hero-body">
+            <p class="title">
+                ☘️ LyricLover ☘️  
+            </p>
+            <p class="subtitle">
+                The Best Application to Retrieve Lyrics from Your Favorite Artist's Songs!
+            </p>
+            <p class="subtitle">
+                Powered By <a href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and Musixmatch
+            </p>
+        </div>
+    </section>
+
+    <!-- container for interactive part of page -->
+    <main class="main">
+        <!-- left half of page -->
+        <section class="leftSection">
+            <!-- artist name submission -->
+            <div id="inputSection">
+                <form id="form">
+                    <label id="name">
+                        Artist Name:
+                    </label>
+                    <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist! Recieve Their Top 10 Songs!">
+                    <button id="submitBtn" class="button is-success" type="button">Search</button>
+                </form>
+            </div>
+    
+            <!-- genres listed -->
+            <div id="genresContainer">
+                <section id="genres" class="buttons is-centered">
+                    <button id="genre1" class="button is-success">Genre1</button>
+                    <button id="genre2" class="button is-success">Genre2</button>
+                    <button id="genre3" class="button is-success">Genre3</button>
+                </section>
+            </div>  
+        </section>
+
+        <!-- song titles returned -->
+        <section class="rightSection buttons" id="container">
+            <div class="songColumn" id="leftSongColumn">
+                <button class="button is-success song" id="song1">Song Title 1</button>
+                <button class="button is-success song" id="song2">Song Title 2</button>
+                <button class="button is-success song" id="song3">Song Title 3</button>
+                <button class="button is-success song" id="song4">Song Title 4</button>
+                <button class="button is-success song" id="song5">Song Title 5</button>
+            </div>
+            <div class="songColumn" id="rightSongColumn">
+                <button class="button is-success song" id="song6">Song Title 6</button>
+                <button class="button is-success song" id="song7">Song Title 7</button>
+                <button class="button is-success song" id="song8">Song Title 8</button>
+                <button class="button is-success song" id="song9">Song Title 9</button>
+                <button class="button is-success song" id="song10">Song Title 10</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        
+      <p>Tracks and Lyrics ❤️ Brought to You With Love By ☘️LyricLover☘️</p> 
+    </footer>
+  
+    <script src="./assets/js/script.js"></script>    
+</body>
+
+</html>

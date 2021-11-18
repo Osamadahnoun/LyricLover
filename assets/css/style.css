@@ -1,0 +1,152 @@
+:root {
+    --primary-color: hsl(204, 86%, 53%);
+    --secondary-color: rgb(62, 142, 208);
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    
+}
+
+.hero {
+    background-color: var(--primary-color);
+}
+
+.main {
+    display: flex;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    
+}
+
+#inputSection {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#form {
+    padding: 35px;
+    margin: 20px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+}
+
+#name {
+    font-weight: bolder;
+    color: white;
+    font-size: xx-large;
+}
+
+#input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#genresContainer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.rightSection {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px 20px 20px 0;
+    align-items: center;
+}
+
+.songColumn {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+}
+
+.song {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.song:hover {
+    cursor: pointer;
+}
+
+#genres {
+  display: flex;
+  justify-content: space-around;
+}
+
+#genre1,
+#genre2,
+#genre3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background: var(--secondary-color);
+    color: white;
+    bottom:0px;
+    width:100%;
+    height: 6%;
+    font-weight: bolder;
+    font-size: 18px
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 460px) {
+    
+#footer {
+display: flex;
+flex-wrap: wrap;
+position: relative;
+bottom:0px;
+width:100%;
+background: var(--primary-color); 
+  }
+
+
+}
+
+@media only screen and (max-width: 615px) {
+    
+    #footer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    bottom:0px;
+    width:100%;
+    background: var(--primary-color); 
+      }
+    
+    .main {
+        margin-bottom: 20px;
+    }
+    
+    }
+
+
+

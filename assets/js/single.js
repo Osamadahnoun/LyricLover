@@ -1,10 +1,14 @@
+
+
 var getInfo = function() {
   var queryString = document.location.search;
   var urlParams = new URLSearchParams(queryString);
-  var artist= urlParams.get('artist');
-  var song = urlParams.get('song');
-  
-  if (artist & song) {
+  var artist= urlParams.get("artist");
+  var song = urlParams.get("song");
+
+  console.log(artist);
+  console.log(song);
+  if (artist && song) {
     getLyrics(artist, song);
   } else {
     document.location.replace("./index.html");
@@ -19,7 +23,8 @@ var getLyrics = function(artist, song) {
       return response.json();
     })
     .then(function(data){
-      console.log(data)
-    })
-    
+      console.log(data.mus[0].text);
+    })    
 }
+
+getInfo();

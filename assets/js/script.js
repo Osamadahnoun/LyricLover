@@ -16,6 +16,7 @@ var Song10El = document.querySelector('#song10');
 
 // This function fetches data from API and prints it to screen through changing each song elements text content 
 var getArtistSongs = function(firstName) {
+  console.log(firstName)
     var apiUrl = 'https://theaudiodb.p.rapidapi.com/track-top10.php?s=' + firstName
     fetch(apiUrl, {
 	"method": "GET",
@@ -30,6 +31,7 @@ var getArtistSongs = function(firstName) {
                 // console.log(data.track.length)
                 var song1 = data.track[0].strTrack
                 Song1El.textContent = song1
+                Song1El.setAttribute("href", "./single.html?artist=metallica&song=and justice for all");
                 var song2 = data.track[1].strTrack
                 Song2El.textContent = song2
                 var song3 = data.track[2].strTrack

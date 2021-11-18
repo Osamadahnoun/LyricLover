@@ -28,28 +28,38 @@ var getArtistSongs = function(firstName) {
     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
+                console.log(data)
                 // console.log(data.track.length)
                 var song1 = data.track[0].strTrack
                 Song1El.textContent = song1
-                Song1El.setAttribute("href", "./single.html?artist=metallica&song=enter sandman");
+                Song1El.setAttribute("href", "./single.html?artist="+data.track[0].strArtist+"&song="+data.track[0].strTrack);
                 var song2 = data.track[1].strTrack
                 Song2El.textContent = song2
+                Song2El.setAttribute("href", "./single.html?artist="+data.track[1].strArtist+"&song="+data.track[1].strTrack);
                 var song3 = data.track[2].strTrack
                 Song3El.textContent = song3
+                Song3El.setAttribute("href", "./single.html?artist="+data.track[2].strArtist+"&song="+data.track[2].strTrack);
                 var song4 = data.track[3].strTrack
                 Song4El.textContent = song4
+                Song4El.setAttribute("href", "./single.html?artist="+data.track[3].strArtist+"&song="+data.track[3].strTrack);
                 var song5 = data.track[4].strTrack
                 Song5El.textContent = song5
+                Song5El.setAttribute("href", "./single.html?artist="+data.track[4].strArtist+"&song="+data.track[4].strTrack);
                 var song6 = data.track[5].strTrack
                 Song6El.textContent = song6
+                Song6El.setAttribute("href", "./single.html?artist="+data.track[5].strArtist+"&song="+data.track[5].strTrack);
                 var song7 = data.track[6].strTrack
                 Song7El.textContent = song7
+                Song7El.setAttribute("href", "./single.html?artist="+data.track[6].strArtist+"&song="+data.track[6].strTrack);
                 var song8 = data.track[7].strTrack
                 Song8El.textContent = song8
+                Song8El.setAttribute("href", "./single.html?artist="+data.track[7].strArtist+"&song="+data.track[7].strTrack);
                 var song9 = data.track[8].strTrack
                 Song9El.textContent = song9
+                Song9El.setAttribute("href", "./single.html?artist="+data.track[8].strArtist+"&song="+data.track[8].strTrack);
                 var song10 = data.track[9].strTrack
                 Song10El.textContent = song10
+                Song10El.setAttribute("href", "./single.html?artist="+data.track[9].strArtist+"&song="+data.track[9].strTrack);
     })
         }
     }) 

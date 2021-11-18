@@ -26,12 +26,20 @@ var getLyrics = function(artist, song) {
     })
     .then(function(data){
       var lyrics = data.mus[0].text;
+      var explicit = data.badwords;
+      var explicitEl = document.createElement("span")
+      if(explicit){
+        explicitEl.classList = "explicit"
+        explicitEl.innerHTML = "Warning: Explicit Content"
+      } else{
+        explicitEl.innerHTML = "Safe: No Explicit Content "
+        explicitEl.classList = "not-explicit"
+      }
       var find = lyrics.replaceAll("\n","<br>");
-      console.log(lyrics)
       var lyricsEl = document.createElement("p");
       lyricsEl.classList ="lyrics";
       lyricsEl.innerHTML = find;
-      console.log(lyricsEl)
+      containerEl.appendChild(explicitEl);
       containerEl.appendChild(lyricsEl);
     })    
 }

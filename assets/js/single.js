@@ -1,4 +1,5 @@
-
+var titleEl = document.querySelector(".info");
+var containerEl = document.querySelector(".container")
 
 var getInfo = function() {
   var queryString = document.location.search;
@@ -6,8 +7,8 @@ var getInfo = function() {
   var artist= urlParams.get("artist");
   var song = urlParams.get("song");
 
-  console.log(artist);
-  console.log(song);
+  titleEl.innerHTML = artist+"/"+song;
+
   if (artist && song) {
     getLyrics(artist, song);
   } else {
@@ -23,7 +24,10 @@ var getLyrics = function(artist, song) {
       return response.json();
     })
     .then(function(data){
-      console.log(data.mus[0].text);
+      var lyrics = data.mus[0].text;
+      var lyricsEl = document.createElement("p");
+      lyricsEl.textContent = lyrics;
+      containerEl.appendChild(lyricsEl);
     })    
 }
 

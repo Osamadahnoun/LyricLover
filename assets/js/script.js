@@ -2,8 +2,9 @@
 var submitBtn = document.querySelector('#submitBtn');
 var container = document.querySelector('#container');
 var input = document.querySelector('#input');
-var albums = document.querySelector('#album')
-var trendingEl = document.querySelector('#trend')
+var albums = document.querySelector('#album');
+var trendingEl = document.querySelector('#trend');
+var lovedEl = document.querySelector('#loved');
 // Global Variables for each individual song element
 var Song1El = document.querySelector('#song1');
 var Song2El = document.querySelector('#song2');
@@ -142,6 +143,50 @@ var trending = function() {
                 var track6 = data.trending[5].strTrack
                 var artist6 = data.trending[5].strArtist
 
+
+            Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            
+    })
+        }
+    }) 
+}
+
+var toptracks = function() {
+    fetch("https://theaudiodb.p.rapidapi.com/mostloved.php?format=track", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "theaudiodb.p.rapidapi.com",
+		"x-rapidapi-key": "ef46e6a41amshf3c1a1224464392p1c3b64jsnd05e7e63b5ee"
+	}
+})    .then(function(response) {
+        if(response.ok) {
+            response.json().then(function(data) {
+            var artist1 = data.loved[0].strArtist;
+            var track1 = data.loved[0].strAlbum;
+            var artist2 = data.loved[1].strArtist;
+            var track2 = data.loved[1].strAlbum;
+            var artist3 = data.loved[2].strArtist;
+            var track3 = data.loved[2].strAlbum;
+            var artist4 = data.loved[3].strArtist;
+            var track4 = data.loved[3].strAlbum;
+            var artist5 = data.loved[4].strArtist;
+            var track5 = data.loved[4].strAlbum;
+            var artist6 = data.loved[5].strArtist;
+            var track6 = data.loved[5].strAlbum;
+            var artist7 = data.loved[6].strArtist;
+            var track7 = data.loved[6].strAlbum;
+            var artist8 = data.loved[7].strArtist;
+            var track8 = data.loved[7].strAlbum;
+            var artist9 = data.loved[8].strArtist;
+            var track9 = data.loved[8].strAlbum;
+            var artist10 = data.loved[9].strArtist;
+            var track10 = data.loved[9].strAlbum;
+
             Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
             Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
             Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
@@ -151,7 +196,9 @@ var trending = function() {
     })
         }
     }) 
+
 }
+
 
 var topAlbumsButton = function() {
     albums.addEventListener('click', function() {
@@ -188,7 +235,7 @@ var trendingButton = function() {
 
 
 // This functiion gives the button element functionality to run the getArtistSongs with the input.value parameter. It also clears the previous inputs song names
-var inputArtistName = function() {
+var inputArtistNameButton = function() {
     submitBtn.addEventListener('click', function() {
         Song1El.textContent = ''
         Song2El.textContent = ''
@@ -205,13 +252,19 @@ var inputArtistName = function() {
 
 }
 
+var topTracksButton = function() {
+    lovedEl.addEventListener('click', function() {
+        toptracks();
+    })
+}
 
-inputArtistName();
+
+inputArtistNameButton();
 
 topAlbumsButton();
 
 trendingButton();
 
-
+topTracksButton();
 
 

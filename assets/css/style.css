@@ -1,13 +1,39 @@
-#LeftSection {
+:root {
+    --primary-color: hsl(204, 86%, 53%);
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    
+}
+
+.hero {
+    background-color: var(--primary-color);
+}
+
+.main {
+    display: flex;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    
+}
+
+#inputSection {
     display: inline-flex;
     flex-direction: column;
 }
 
-
 #form {
-    padding: 90px;
-    margin: 50px;
-    background-color: hsl(204, 86%, 53%);
+    padding: 35px;
+    margin: 20px;
+    background-color: var(--primary-color);
     border-radius: 12px;
 }
 
@@ -16,50 +42,110 @@
     color: white;
     font-size: xx-large;
 }
+
 #input {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#container {
+#genresContainer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.rightSection {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    margin: 20px 20px 20px 0;
+    align-items: center;
+}
+
+.songColumn {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: absolute;
+    align-items: flex-start;
+    
+    
 }
 
 .song {
-    background-color: hsl(204, 86%, 53%);
     color: white;
-    margin-bottom: 10px;
-    border-radius: 12px;
+    border-radius: 5px;
     padding: 5px;
-    margin-top: 50px ;
+    margin-top: 20px;
 }
 
+.song:hover {
+    cursor: pointer;
+}
 
 #genres {
-  padding-left: 175px;
+  display: flex;
+  justify-content: space-around;
 }
 
-#genre1 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#genre2 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
+#genre1,
+#genre2,
 #genre3 {
     margin-left: 20px;
     margin-right: 20px;
 }
 
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background: var(--primary-color);
+    color: white;
+    bottom:0px;
+    width:100%;
+    height: 100px;
+    font-weight: bolder;
+    font-size: 22px
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 460px) {
+    
+#footer {
+display: flex;
+flex-wrap: wrap;
+position: relative;
+bottom:0px;
+width:100%;
+background: var(--primary-color); 
+  }
 
 
+}
 
+@media only screen and (max-width: 615px) {
+    
+    #footer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    bottom:0px;
+    width:100%;
+    background: var(--primary-color); 
+      }
+    
+    .main {
+        margin-bottom: 20px;
+    }
+    
+    }
 
 
 

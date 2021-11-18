@@ -71,7 +71,74 @@ var inputArtistName = function() {
 
 }
 
+var topAlbums = function() {
+    fetch("https://theaudiodb.p.rapidapi.com/mostloved.php?format=album", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "theaudiodb.p.rapidapi.com",
+		"x-rapidapi-key": "ef46e6a41amshf3c1a1224464392p1c3b64jsnd05e7e63b5ee"
+	}
+})
+.then(function(response) {
+    if(response.ok) {
+        response.json().then(function(data) {
+            var album1 = data.loved[0].strAlbum
+            var artist1 = data.loved[0].strArtist
+            console.log(album1)
+            console.log(artist1)
+            var album2 = data.loved[1].strAlbum
+            var artist2 = data.loved[1].strArtist
+            console.log(album2)
+            console.log(artist2)
+            var album3 = data.loved[2].strAlbum
+            var artist3 = data.loved[2].strArtist
+            console.log(album3)
+            console.log(artist3)
+            var album4 = data.loved[3].strAlbum
+            var artist4 = data.loved[3].strArtist
+            console.log(album4)
+            console.log(artist4)
+            var album5 = data.loved[4].strAlbum
+            var artist5 = data.loved[4].strArtist
+            console.log(album5)
+            console.log(artist5)
+            var album6 = data.loved[5].strAlbum
+            var artist6 = data.loved[5].strArtist
+            console.log(album6)
+            console.log(artist6)
+            var album7 = data.loved[6].strAlbum
+            var artist7 = data.loved[6].strArtist
+            console.log(album7)
+            console.log(artist7)
+            var album8 = data.loved[7].strAlbum
+            var artist8 = data.loved[7].strArtist
+            console.log(album8)
+            console.log(artist8)
+            var album9 = data.loved[8].strAlbum
+            var artist9 = data.loved[8].strArtist
+            console.log(album9)
+            console.log(artist9)
+            var album10 = data.loved[9].strAlbum
+            var artist10 = data.loved[9].strArtist
+            console.log(album10)
+            console.log(artist10)
+            Song1El.textContent = "Art"
+            // Song2El.textContent = song2
+            // Song3El.textContent = song3
+            // Song4El.textContent = song4
+            // Song5El.textContent = song5
+            // Song6El.textContent = song6
+            // Song7El.textContent = song7
+            // Song8El.textContent = song8
+            // Song9El.textContent = song9
+            // Song10El.textContent = song10
+})
+    }
+}) 
+}
+
+topAlbums();
+
+
 inputArtistName();
-
-
 

@@ -128,6 +128,7 @@ var trending = function() {
 })     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
+                console.log(data)
                 var track1 = data.trending[0].strTrack
                 var artist1 = data.trending[0].strArtist
                 var track2 = data.trending[1].strTrack
@@ -138,6 +139,8 @@ var trending = function() {
                 var artist4 = data.trending[3].strArtist
                 var track5 = data.trending[4].strTrack
                 var artist5 = data.trending[4].strArtist
+                var track6 = data.trending[5].strTrack
+                var artist6 = data.trending[5].strArtist
 
             Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
             Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
@@ -145,10 +148,6 @@ var trending = function() {
             Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
             Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
             Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
-            Song7El.textContent = "7. Artist: " + artist7 + ", Track: " + track7;
-            Song8El.textContent = "8. Artist: " + artist8 + ", Track: " + track8;
-            Song9El.textContent = "9. Artist: " + artist9 + ", Track: " + track9;
-            Song10El.textContent = "10. Artist: " + artist10 + ", Track: " + track10;
     })
         }
     }) 

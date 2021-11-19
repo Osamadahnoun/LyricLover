@@ -1,5 +1,7 @@
-var titleEl = document.querySelector(".info");
+var albumEl = document.querySelector(".album");
+var bandEl = document.querySelector(".band");
 var containerEl = document.querySelector(".container")
+var albumHeaderEl = document.querySelector(".album-header");
 
 var getInfo = function() {
   var queryString = document.location.search;
@@ -8,17 +10,37 @@ var getInfo = function() {
   var album= urlParams.get("album");
   var albumId = urlParams.get("id");
 
-  titleEl.innerHTML = (artist+"/"+album).toUpperCase();
+  albumEl.innerHTML = album.toUpperCase();
+  bandEl.innerHTML =  artist.toUpperCase();
 
-  if (artist && album && albumId) {
-    getSongs(albumId, artist);
-  } else {
-    document.location.replace("./index.html");
-  }
+  var albumUrl = "https://theaudiodb.com/api/v1/json/1/album.php?m=" + albumId;
+
+  fetch(albumUrl)
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(data){
+      var imageUrl = data.album[0].strAlbumThumb;
+
+      var img = document.createElement("img");
+      img.classList = "thumbnail"
+      img.setAttribute("src", imageUrl);
+      img.setAttribute("alt","album thumbnail", "width", "100", "height","100");
+      img.setAttribute("width", "250");
+      img.setAttribute("height","250");
+
+      albumHeaderEl.appendChild(img)
+      if (artist && album && albumId) {
+        getSongs(albumId, artist,);
+      } else {
+        document.location.replace("./index.html");
+      }
+    })
+
 };
 
 var getSongs = function(albumId, artist) {
-
+  console.log(albumId)
   var albumUrl = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + albumId
   fetch(albumUrl)
   .then(function(response){
@@ -32,7 +54,6 @@ var getSongs = function(albumId, artist) {
       songList.innerText =(i+1) +". " + data.track[i].strTrack;
       songList.setAttribute("href", "./single.html?artist="+artist+"&song="+data.track[i].strTrack);
       songList.classList = "albumSong"
-      console.log(songList)
       songsContainer.appendChild(songList);
     }
     containerEl.appendChild(songsContainer)
@@ -42,5 +63,3 @@ var getSongs = function(albumId, artist) {
 };
 
 getInfo()
-
-// https://theaudiodb.com/api/v1/json/1/track.php?m=2109889

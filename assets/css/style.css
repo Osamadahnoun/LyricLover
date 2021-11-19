@@ -150,6 +150,20 @@ body {
   font-family: Arial,sans-serif;
 }
 
+.songsContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.albumSong {
+  background-color: #48c78e;
+  color: white;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  
+}
 
 /* Media Queries */
 

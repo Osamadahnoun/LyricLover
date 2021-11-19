@@ -70,7 +70,6 @@ var getArtistSongs = function(firstName) {
     }) 
 }
 
-
 var topAlbums = function() {
     fetch("https://theaudiodb.p.rapidapi.com/mostloved.php?format=album", {
 	"method": "GET",
@@ -82,6 +81,7 @@ var topAlbums = function() {
 .then(function(response) {
     if(response.ok) {
         response.json().then(function(data) {
+            console.log(data)
             var album1 = data.loved[0].strAlbum
             var artist1 = data.loved[0].strArtist
             var album2 = data.loved[1].strAlbum
@@ -104,15 +104,25 @@ var topAlbums = function() {
             var artist10 = data.loved[9].strArtist
             
             Song1El.textContent = "1. Artist: " + artist1 + ", Album: " + album1;
+            Song1El.setAttribute("href", "./album.html?artist="+data.loved[0].strArtist+"&album="+data.loved[0].strAlbum+"&id="+data.loved[0].idAlbum);
             Song2El.textContent = "2. Artist: " + artist2 + ", Album: " + album2;
+            Song2El.setAttribute("href", "./album.html?artist="+data.loved[1].strArtist+"&album="+data.loved[1].strAlbum+"&id="+data.loved[1].idAlbum);
             Song3El.textContent = "3. Artist: " + artist3 + ", Album: " + album3;
+            Song3El.setAttribute("href", "./album.html?artist="+data.loved[2].strArtist+"&album="+data.loved[2].strAlbum+"&id="+data.loved[2].idAlbum);
             Song4El.textContent = "4. Artist: " + artist4 + ", Album: " + album4;
+            Song4El.setAttribute("href", "./album.html?artist="+data.loved[3].strArtist+"&album="+data.loved[3].strAlbum+"&id="+data.loved[3].idAlbum);
             Song5El.textContent = "5. Artist: " + artist5 + ", Album: " + album5;
+            Song5El.setAttribute("href", "./album.html?artist="+data.loved[4].strArtist+"&album="+data.loved[4].strAlbum+"&id="+data.loved[4].idAlbum);
             Song6El.textContent = "6. Artist: " + artist6 + ", Album: " + album6;
+            Song6El.setAttribute("href", "./album.html?artist="+data.loved[5].strArtist+"&album="+data.loved[5].strAlbum+"&id="+data.loved[5].idAlbum);
             Song7El.textContent = "7. Artist: " + artist7 + ", Album: " + album7;
+            Song7El.setAttribute("href", "./album.html?artist="+data.loved[6].strArtist+"&album="+data.loved[6].strAlbum+"&id="+data.loved[6].idAlbum);
             Song8El.textContent = "8. Artist: " + artist8 + ", Album: " + album8;
+            Song8El.setAttribute("href", "./album.html?artist="+data.loved[7].strArtist+"&album="+data.loved[7].strAlbum+"&id="+data.loved[7].idAlbum);
             Song9El.textContent = "9. Artist: " + artist9 + ", Album: " + album9;
+            Song9El.setAttribute("href", "./album.html?artist="+data.loved[8].strArtist+"&album="+data.loved[8].strAlbum+"&id="+data.loved[8].idAlbum);
             Song10El.textContent = "10. Artist: " + artist10 + ", Album: " + album10;
+            Song10El.setAttribute("href", "./album.html?artist="+data.loved[9].strArtist+"&album="+data.loved[9].strAlbum+"&id="+data.loved[9].idAlbum);
            
 })
     }
@@ -129,7 +139,6 @@ var trending = function() {
 })     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
-                console.log(data)
                 var track1 = data.trending[0].strTrack
                 var artist1 = data.trending[0].strArtist
                 var track2 = data.trending[1].strTrack
@@ -145,11 +154,17 @@ var trending = function() {
 
 
             Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);
             Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song2El.setAttribute("href", "./single.html?artist="+artist2+"&song="+track2);
             Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song3El.setAttribute("href", "./single.html?artist="+artist3+"&song="+track3);
             Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song4El.setAttribute("href", "./single.html?artist="+artist4+"&song="+track4);
             Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song5El.setAttribute("href", "./single.html?artist="+artist5+"&song="+track5);
             Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            Song6El.setAttribute("href", "./single.html?artist="+artist6+"&song="+track6);
             
     })
         }
@@ -188,11 +203,17 @@ var toptracks = function() {
             var track10 = data.loved[9].strAlbum;
 
             Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);
             Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song2El.setAttribute("href", "./single.html?artist="+artist2+"&song="+track2);
             Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song3El.setAttribute("href", "./single.html?artist="+artist3+"&song="+track3);
             Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song4El.setAttribute("href", "./single.html?artist="+artist4+"&song="+track4);
             Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song5El.setAttribute("href", "./single.html?artist="+artist5+"&song="+track5);
             Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            Song6El.setAttribute("href", "./single.html?artist="+artist6+"&song="+track6);
     })
         }
     }) 
@@ -231,6 +252,7 @@ var trendingButton = function() {
         trending();
     })
 }
+
 
 
 

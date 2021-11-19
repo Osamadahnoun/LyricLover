@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="hero is-info has-text-centered">
+    <section class="hero has-text-centered" id="header">
         <div class="hero-body">
             <p class="title">
                 ☘️ LyricLover ☘️  
@@ -20,7 +20,7 @@
                 The Best Application to Retrieve Lyrics from Your Favorite Artist's Songs!
             </p>
             <p class="subtitle">
-                Powered By <a href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and <a href="https://www.vagalume.com.br" target="_blank">vagalume.</a>
+                Powered By <a class ="subtitle" href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and <a class="subtitle" href="https://www.vagalume.com.br" target="_blank">vagalume.</a>
             </p>
         </div>
     </section>
@@ -33,19 +33,19 @@
             <div id="inputSection">
                 <form id="form">
                     <label id="name">
-                        Artist Name:
+                        <p class="formText">Artist Name:</p>
                     </label>
                     <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist! Recieve Their Top Songs!">
-                    <button id="submitBtn" class="button is-success" type="button">Search</button>
+                    <button id="submitBtn" class="button" type="button">Search</button>
                 </form>
             </div>
     
             <!-- genres listed -->
             <div id="genresContainer">
                 <section id="genres" class="buttons is-centered">
-                    <button id="album" class="button is-success">Most Loved Albums</button>
-                    <button id="trend" class="button is-success">Trending Tracks</button>
-                    <button id="loved" class="button is-success">Most Loved Tracks</button>
+                    <button id="album" class="button">Most Loved Albums</button>
+                    <button id="trend" class="button">Trending Tracks</button>
+                    <button id="loved" class="button">Most Loved Tracks</button>
                 </section>
             </div>  
         </section>
@@ -53,18 +53,18 @@
         <!-- song titles returned -->
         <section class="rightSection buttons" id="container">
             <div class="songColumn" id="leftSongColumn">
-                <a class="button is-success song" id="song1"></a>
-                <a class="button is-success song" id="song2"></a>
-                <a class="button is-success song" id="song3"></a>
-                <a class="button is-success song" id="song4"></a>
-                <a class="button is-success song" id="song5"></a>
+                <a class="button song" id="song1"></a>
+                <a class="button song" id="song2"></a>
+                <a class="button song" id="song3"></a>
+                <a class="button song" id="song4"></a>
+                <a class="button song" id="song5"></a>
             </div>
             <div class="songColumn" id="rightSongColumn">
-                <a class="button is-success song" id="song6"></a>
-                <a class="button is-success song" id="song7"></a>
-                <a class="button is-success song" id="song8"></a>
-                <a class="button is-success song" id="song9"></a>
-                <a class="button is-success song" id="song10"></a>
+                <a class="button song" id="song6"></a>
+                <a class="button song" id="song7"></a>
+                <a class="button song" id="song8"></a>
+                <a class="button song" id="song9"></a>
+                <a class="button song" id="song10"></a>
             </div>
         </section>
         

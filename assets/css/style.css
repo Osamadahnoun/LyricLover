@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4b3d8f;
     --text-color: #b7b1d2; 
-    --secondary-color: #39993A;
+    --secondary-color: #37a987;
 }
 
 html,
@@ -24,8 +24,8 @@ body {
 }
 
 .button {
-    background-color: var(--secondary-color);
     color: var(--text-color);
+    background-color: var(--secondary-color);
 }
 
 .formText {

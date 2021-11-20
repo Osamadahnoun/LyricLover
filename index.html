@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="hero is-info has-text-centered">
+    <section class="hero has-text-centered">
         <div class="hero-body">
             <p class="title">
                 ☘️ LyricLover ☘️  
@@ -35,36 +35,44 @@
                     <label id="name">
                         Artist Name:
                     </label>
-                    <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist! Recieve Their Top Songs!">
-                    <button id="submitBtn" class="button is-success" type="button">Search</button>
+                    <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist! Receive Their Top Songs!">
+                    <button id="submitBtn" class="button" type="button">
+                        <span id="search-btn-text">Search</span>
+                    </button>
                 </form>
             </div>
     
             <!-- genres listed -->
             <div id="genresContainer">
                 <section id="genres" class="buttons is-centered">
-                    <button id="album" class="button is-success">Most Loved Albums</button>
-                    <button id="trend" class="button is-success">Trending Tracks</button>
-                    <button id="loved" class="button is-success">Most Loved Tracks</button>
+                    <button id="album" class="button">
+                        <span id="search-btn-text">Most Loved Albums</span>
+                    </button>
+                    <button id="trend" class="button">
+                        <span id="search-btn-text">Trending Tracks</span>
+                    </button>
+                    <button id="loved" class="button">
+                        <span id="search-btn-text">Most Loved Tracks</span>
+                    </button>
                 </section>
             </div>  
         </section>
 
-        <!-- song titles returned -->
+        <!-- song titles returned on right side of page-->
         <section class="rightSection buttons" id="container">
             <div class="songColumn" id="leftSongColumn">
-                <a class="button is-success song" id="song1"></a>
-                <a class="button is-success song" id="song2"></a>
-                <a class="button is-success song" id="song3"></a>
-                <a class="button is-success song" id="song4"></a>
-                <a class="button is-success song" id="song5"></a>
+                <a class="button song" id="song1"></a>
+                <a class="button song" id="song2"></a>
+                <a class="button song" id="song3"></a>
+                <a class="button song" id="song4"></a>
+                <a class="button song" id="song5"></a>
             </div>
             <div class="songColumn" id="rightSongColumn">
-                <a class="button is-success song" id="song6"></a>
-                <a class="button is-success song" id="song7"></a>
-                <a class="button is-success song" id="song8"></a>
-                <a class="button is-success song" id="song9"></a>
-                <a class="button is-success song" id="song10"></a>
+                <a class="button song" id="song6"></a>
+                <a class="button song" id="song7"></a>
+                <a class="button song" id="song8"></a>
+                <a class="button song" id="song9"></a>
+                <a class="button song" id="song10"></a>
             </div>
         </section>
         

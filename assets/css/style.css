@@ -1,16 +1,27 @@
 :root {
-    --primary-color: hsl(204, 86%, 53%);
+    --primary-color: #262629;
+    --text-color: white;
+    --section-border: 2px solid black;
 }
 
 html,
 body {
     margin: 0;
     height: 100%;
-    
+    background-color: #9b9aa6;
 }
 
 .hero {
     background-color: var(--primary-color);
+    border: var(--section-border);
+}
+
+.title {
+  color: var(--text-color);
+}
+
+.subtitle {
+  color: var(--text-color);
 }
 
 .main {
@@ -34,12 +45,13 @@ body {
     padding: 35px;
     margin: 20px;
     background-color: var(--primary-color);
+    border: var(--section-border);
     border-radius: 12px;
 }
 
 #name {
     font-weight: bolder;
-    color: white;
+    color: var(--text-color);
     font-size: xx-large;
 }
 
@@ -48,11 +60,22 @@ body {
     margin-bottom: 20px;
 }
 
+.button {
+    background-color: #39993a;
+    border: var(--section-border);
+    
+}
+
+#search-btn-text {
+    color: white;
+}
+
 #genresContainer {
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
     border-radius: 12px;
+    border: var(--section-border);
     margin: 20px;
     padding: 20px;
 }
@@ -63,6 +86,7 @@ body {
     justify-content: space-evenly;
     background-color: var(--primary-color);
     border-radius: 12px;
+    border: var(--section-border);
     margin: 20px 20px 20px 0;
     align-items: center;
 }
@@ -77,7 +101,7 @@ body {
 }
 
 .song {
-    color: white;
+    color: var(--text-color);
     border-radius: 5px;
     padding: 5px;
     margin-top: 20px;
@@ -104,9 +128,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position:absolute;
+    /*position:absolute;*/
     background: var(--primary-color);
-    color: white;
+    color: var(--text-color);
     bottom:0px;
     width:100%;
     height: 100px;
@@ -146,7 +170,7 @@ body {
   margin: 10px;
 }
 
-.not-explicit{
+.not-explicit {
   background-color: green;
   color:white;
   padding: 2px 5px;

@@ -1,13 +1,14 @@
 :root {
-    --primary-color: #4b3d8f;
-    --text-color: #b7b1d2; 
-    --secondary-color: #37a987;
+    --primary-color: #241f1c;
+    --text-color: #e7dac7; 
 }
 
 html,
 body {
-    margin: 0;
+    margin: 0rem;
+    padding: 0rem;
     height: 100%;
+    font-size: 62.5%;
     background-color: var(--text-color);
 }
 
@@ -17,15 +18,18 @@ body {
 
 .title {
     color: var(--text-color);
+    font-size: 3.5rem
 }
 
 .subtitle {
     color: var(--text-color);
+    font-size: 2.5rem
 }
 
 .button {
     color: var(--text-color);
     background-color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 
 .formText {
@@ -35,7 +39,7 @@ body {
 
 .main {
     display: flex;
-   
+    
 }
 
 .leftSection {
@@ -52,8 +56,8 @@ body {
 }
 
 #form {
-    padding: 35px;
-    margin: 20px;
+    padding: 3.5rem;
+    margin: 2rem;
     background-color: var(--primary-color);
     border-radius: 12px;
 }
@@ -61,12 +65,15 @@ body {
 #name {
     font-weight: bolder;
     color: white;
-    font-size: xx-large;
+    font-size: 3rem;
 }
 
 #input {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3em;
     background-color: var(--text-color);
 }
 
@@ -74,9 +81,9 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
-    border-radius: 12px;
-    margin: 20px;
-    padding: 20px;
+    border-radius: 1.2rem;
+    margin: 2rem;
+    padding: 2rem;
 }
 
 .rightSection {
@@ -84,25 +91,25 @@ body {
     width: 50%;
     justify-content: space-evenly;
     background-color: var(--primary-color);
-    border-radius: 12px;
-    margin: 20px 20px 20px 0;
+    border-radius: 1.2rem;
+    margin: 2rem 2rem 2rem 0;
     align-items: center;
 }
 
 .songColumn {
-    display: inline-flex;
+     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
-    
-    
+    padding: 1rem;
 }
 
 .song {
     color: white;
-    border-radius: 5px;
-    padding: 5px;
-    margin-top: 20px;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
 }
 
 .song:hover {
@@ -117,8 +124,8 @@ body {
 #genre1,
 #genre2,
 #genre3 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #footer {
@@ -126,14 +133,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position:absolute;
     background: var(--primary-color);
     color: var(--text-color);
-    bottom:0px;
-    width:100%;
-    height: 100px;
+    bottom: 0rem;
+    height: 10rem;
     font-weight: bolder;
-    font-size: 22px
+    font-size: 2.2rem;
 }
 
 .container {
@@ -179,12 +184,23 @@ body {
 #footer {
 display: flex;
 flex-wrap: wrap;
-position: relative;
-bottom:0px;
+bottom:0rem;
 width:100%;
 background: var(--primary-color); 
   }
 
+  .leftSection {
+    min-width: 100%;
+}
+
+.rightSection {
+    min-width: 100%;
+}
+
+.main {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
 
 }
 
@@ -193,17 +209,56 @@ background: var(--primary-color);
     #footer {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    bottom:0px;
+    bottom:0rem;
     width:100%;
     background: var(--primary-color); 
       }
     
     .main {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .leftSection {
+        min-width: 100%;
     }
     
+    .rightSection {
+        min-width: 100%;
     }
+
+    }
+
+
+    @media only screen and (max-width: 800px) {
+    
+        #footer {
+        display: flex;
+        flex-wrap: wrap;
+        
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+          }
+        
+        .main {
+            margin-bottom: 2rem;
+        }
+        
+        }
+
+    @media only screen and (min-width: 800px) {
+    
+        #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+          }
+        
+        }
 
 
 

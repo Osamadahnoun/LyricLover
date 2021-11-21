@@ -29,7 +29,6 @@ body {
 .button {
     color: var(--text-color);
     background-color: var(--secondary-color);
-    font-size: 1.5rem;
 }
 
 .formText {
@@ -109,7 +108,6 @@ body {
     border-radius: .5rem;
     padding: .5rem;
     margin-top: 2rem;
-    font-size: 1.5rem;
 }
 
 .song:hover {
@@ -204,7 +202,7 @@ background: var(--primary-color);
 
 }
 
-@media only screen and (max-width: 615px) {
+@media only screen and (max-width: 770px) {
     
     #footer {
     display: flex;
@@ -235,7 +233,6 @@ background: var(--primary-color);
         #footer {
         display: flex;
         flex-wrap: wrap;
-        
         bottom:0rem;
         width:100%;
         background: var(--primary-color); 
@@ -252,13 +249,85 @@ background: var(--primary-color);
         #footer {
         display: flex;
         flex-wrap: wrap;
-        position: absolute;
+        position: relative;
         bottom:0rem;
         width:100%;
         background: var(--primary-color); 
           }
         
+          .main {
+              margin-bottom: 2rem;
+          }
         }
+
+        @media only screen and (min-width: 1000px) {
+            #footer {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                bottom:0rem;
+                width:100%;
+                margin-top: 2rem;
+                background: var(--primary-color); 
+                  }
+            .main {
+                margin-bottom: 2rem;
+            }
+
+            }
+
+            @media only screen and (min-width: 1150px) {
+                #footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    top: 275px;
+                    bottom:0rem;
+                    width:100%;
+                    margin-top: 2rem;
+                    background: var(--primary-color);
+                      }
+                .main {
+                    margin-bottom: 2rem;
+                }
+    
+                }
+
+                
+                @media only screen and (min-width: 771px) {
+                    #footer {
+                        display: flex;
+                        flex-wrap: wrap;
+                        position: relative;
+                        top: 275px;
+                        bottom:0rem;
+                        width:100%;
+                        margin-top: 2rem;
+                        background: var(--primary-color);
+                          }
+                    .main {
+                        margin-bottom: 2rem;
+                    }
+        
+                    }
+
+
+            @media only screen and (min-width: 1500px) {
+                #footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    top: 275px;
+                    bottom:0rem;
+                    width:100%;
+                    margin-top: 2rem;
+                    background: var(--primary-color);
+                      }
+                .main {
+                    margin-bottom: 2rem;
+                }
+    
+                }
 
 
 

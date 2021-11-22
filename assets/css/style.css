@@ -143,6 +143,10 @@ body {
     font-size: 2.2rem;
 }
 
+#footer-lyricLover {
+    margin-bottom: 1.5rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -258,7 +262,8 @@ body {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color); 
+        background: var(--primary-color);
+        justify-content: space-evenly;
     }
 
     .main {

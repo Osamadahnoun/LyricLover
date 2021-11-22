@@ -53,7 +53,8 @@ var getSongs = function(albumId, artist) {
       var songList = document.createElement("a")
       songList.innerText =(i+1) +". " + data.track[i].strTrack;
       songList.setAttribute("href", "./single.html?artist="+artist+"&song="+data.track[i].strTrack);
-      songList.classList = "albumSong"
+      songList.setAttribute('class', 'button is-success is-size-6-mobile is-size-5-tablet is-size-4-desktop');
+      songList.setAttribute('style', 'margin:5px 0')
       songsContainer.appendChild(songList);
     }
     containerEl.appendChild(songsContainer)

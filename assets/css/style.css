@@ -203,15 +203,6 @@ body {
 }
 
 
-
-.albumSong {
-  background-color: #48c78e;
-  color: white;
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 .thumbnail {
   border:gray 2px solid;
 }

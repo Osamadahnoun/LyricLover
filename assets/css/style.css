@@ -103,7 +103,7 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -353,7 +353,7 @@ body {
                 
 }
 
-@media only screen and (max-width: 460px) {
+/*@media only screen and (max-width: 460px) {
     
     #footer {
         display: flex;
@@ -376,9 +376,10 @@ body {
         margin-bottom: 2rem;
     }
                     
-}
+}*/
 
-@media only screen and (max-width: 360px) {
+/* larger cell viewports */
+@media only screen and (max-width: 480px) {
     
     #header {
         max-width: 100%;
@@ -497,4 +498,12 @@ body {
         font-size: 20px;
     }
                     
+}
+
+/* smallest cell viewports */
+@media only screen and (max-width: 324px) {
+
+    .title {
+        font-size: 3rem;
+    }
 }

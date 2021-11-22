@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #241f1c;
     --text-color: #e7dac7; 
@@ -99,7 +103,7 @@ body {
      display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -209,158 +213,284 @@ body {
 
 /* Media Queries */
 
-@media only screen and (max-width: 460px) {
-    
-#footer {
-display: flex;
-flex-wrap: wrap;
-bottom:0rem;
-width:100%;
-background: var(--primary-color); 
-  }
+@media only screen and (min-width: 771px) {
 
-  .leftSection {
-    min-width: 100%;
-}
-
-.rightSection {
-    min-width: 100%;
-}
-
-.main {
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-}
-
-}
-
-@media only screen and (max-width: 770px) {
-    
     #footer {
-    display: flex;
-    flex-wrap: wrap;
-    bottom:0rem;
-    width:100%;
-    background: var(--primary-color); 
-      }
-    
-    .main {
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .leftSection {
-        min-width: 100%;
-    }
-    
-    .rightSection {
-        min-width: 100%;
-    }
-
-    }
-
-
-    @media only screen and (max-width: 800px) {
-    
-        #footer {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+        top: 275px;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
-          }
-        
-        .main {
-            margin-bottom: 2rem;
-        }
-        
+        margin-top: 2rem;
+        background: var(--primary-color);
         }
 
-    @media only screen and (min-width: 800px) {
+    .main {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
     
-        #footer {
+    #footer {
         display: flex;
         flex-wrap: wrap;
         position: relative;
         bottom:0rem;
         width:100%;
         background: var(--primary-color); 
-          }
+    }
         
-          .main {
-              margin-bottom: 2rem;
-          }
-        }
+    .main {
+        margin-bottom: 2rem;
+    }
 
-        @media only screen and (min-width: 1000px) {
-            #footer {
-                display: flex;
-                flex-wrap: wrap;
-                position: relative;
-                bottom:0rem;
-                width:100%;
-                margin-top: 2rem;
-                background: var(--primary-color); 
-                  }
-            .main {
-                margin-bottom: 2rem;
-            }
+}
 
-            }
+@media only screen and (min-width: 1000px) {
 
-            @media only screen and (min-width: 771px) {
-                #footer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    position: relative;
-                    top: 275px;
-                    bottom:0rem;
-                    width:100%;
-                    margin-top: 2rem;
-                    background: var(--primary-color);
-                      }
-                .main {
-                    margin-bottom: 2rem;
-                }
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color); 
+    }
+
+    .main {
+        margin-bottom: 2rem;
+    }
+
+}
+
+            
+
+@media only screen and (min-width: 1150px) {
+
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: 275px;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color);
+    }
+
+    .main {
+        margin-bottom: 2rem;
+    }
     
-                }
+}
 
-            @media only screen and (min-width: 1150px) {
-                #footer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    position: relative;
-                    top: 275px;
-                    bottom:0rem;
-                    width:100%;
-                    margin-top: 2rem;
-                    background: var(--primary-color);
-                      }
-                .main {
-                    margin-bottom: 2rem;
-                }
+@media only screen and (min-width: 1500px) {
+
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: 275px;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color);
+    }
+
+    .main {
+        margin-bottom: 2rem;
+    }
     
-                }
+}
 
+@media only screen and (max-width: 800px) {
+    
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+    }
+                    
+    .main {
+        margin-bottom: 2rem;
+    }
+                    
+}
+
+@media only screen and (max-width: 770px) {
+    
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+    }
+                    
+    .main {
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
                 
+    .leftSection {
+        min-width: 100%;
+    }
+                    
+    .rightSection {
+        min-width: 100%;
+    }
+                
+}
 
-
-            @media only screen and (min-width: 1500px) {
-                #footer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    position: relative;
-                    top: 275px;
-                    bottom:0rem;
-                    width:100%;
-                    margin-top: 2rem;
-                    background: var(--primary-color);
-                      }
-                .main {
-                    margin-bottom: 2rem;
-                }
+@media only screen and (max-width: 460px) {
     
-                }
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+    }
+                    
+    .leftSection {
+        min-width: 100%;
+    }
+                    
+    .rightSection {
+        min-width: 100%;
+    }
+                    
+    .main {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+                    
+}
 
+@media only screen and (max-width: 360px) {
+    
+    #header {
+        max-width: 100%;
+        padding: 5px 10px 0 10px;
+    }
 
+    .subtitle {
+        font-size: 13px;
+    }
 
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    #form,
+    #genres {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formText {
+        font-size: 24px;
+    }
+
+    #genresContainer {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 33px;
+    }
+
+    #album,
+    #trend,
+    #loved {
+        margin: 10px 0;
+    }
+
+    #submitBtn,
+    #album,
+    #trend,
+    #loved,
+    #song1,
+    #song2,
+    #song3,
+    #song4,
+    #song5,
+    #song6,
+    #song7,
+    #song8,
+    #song9,
+    #song10 {
+        display: flex;
+        align-items: stretch;
+    }
+   
+    .leftSection {
+        min-width: 100%;
+    }
+                    
+    .rightSection {
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        margin: 0 20px;
+    }
+
+    #leftSongColumn {
+        padding: 10px 0 0 0;
+    }
+
+    #rightSongColumn {
+        padding: 0 0 10px 0;
+    }
+                    
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+    }
+
+    .info {
+        font-size: 25px;
+    }
+
+    .lyrics {
+        width: 85%;
+        font-size: 14px;
+        margin: 1.5rem auto 5rem auto;
+    }
+
+    .album-header {
+        max-width: 90%;
+    }
+
+    .thumbnail {
+        height: 125px;
+        width: 125px;
+    }
+
+    .album-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 7px;
+    }
+
+    .album {
+        font-size: 25px;
+    }
+
+    .band {
+        font-size: 20px;
+    }
+                    
+}

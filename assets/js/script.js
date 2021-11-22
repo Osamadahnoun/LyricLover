@@ -306,7 +306,6 @@ topAlbumsButton();
 
 trendingButton();
 
-// topTracksButton();
+topTracksButton();
 
-toptracks();
 

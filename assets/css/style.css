@@ -100,10 +100,10 @@ body {
 }
 
 .songColumn {
-     display: inline-flex;
+    display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     padding: 1rem;
 }
 
@@ -445,7 +445,6 @@ body {
         display: flex;
         flex-direction: column;
         min-width: 100%;
-        margin: 0 20px;
     }
 
     #leftSongColumn {

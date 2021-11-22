@@ -150,6 +150,17 @@ body {
   font-weight: bold;
   font-size: 45px;
   max-width: 100%;
+  margin-left: 5px;
+}
+
+.album {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.band {
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .explicit {
@@ -176,6 +187,33 @@ body {
   margin:  3rem auto 5rem auto;
   font-family: Arial,sans-serif;
   font-size: 2rem;
+}
+
+.songsContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.album-header {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.albumSong {
+  background-color: #48c78e;
+  color: white;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.thumbnail {
+  border:gray 2px solid;
 }
 
 /* Media Queries */

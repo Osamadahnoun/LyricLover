@@ -181,6 +181,7 @@ var toptracks = function() {
 })    .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
+                console.log(data)
             var artist1 = data.loved[0].strArtist;
             var track1 = data.loved[0].strAlbum;
             var artist2 = data.loved[1].strArtist;
@@ -204,16 +205,34 @@ var toptracks = function() {
 
             Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
             Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);
+
             Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
             Song2El.setAttribute("href", "./single.html?artist="+artist2+"&song="+track2);
+
             Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
             Song3El.setAttribute("href", "./single.html?artist="+artist3+"&song="+track3);
+
             Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
             Song4El.setAttribute("href", "./single.html?artist="+artist4+"&song="+track4);
+
             Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
             Song5El.setAttribute("href", "./single.html?artist="+artist5+"&song="+track5);
+
             Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
             Song6El.setAttribute("href", "./single.html?artist="+artist6+"&song="+track6);
+
+            Song7El.textContent = "7. Artist: " + artist7 + ", Track: " + track7;
+            Song7El.setAttribute("href", "./single.html?artist="+artist7+"&song="+track7);
+
+            Song8El.textContent = "8. Artist: " + artist8 + ", Track: " + track8;
+            Song8El.setAttribute("href", "./single.html?artist="+artist8+"&song="+track8);
+
+            Song9El.textContent = "9. Artist: " + artist9 + ", Track: " + track9;
+            Song9El.setAttribute("href", "./single.html?artist="+artist9+"&song="+track9);
+
+            Song10El.textContent = "10. Artist: " + artist10 + ", Track: " + track10;
+            Song10El.setAttribute("href", "./single.html?artist="+artist10+"&song="+track10);
+            
     })
         }
     }) 
@@ -287,6 +306,7 @@ topAlbumsButton();
 
 trendingButton();
 
-topTracksButton();
+// topTracksButton();
 
+toptracks();
 

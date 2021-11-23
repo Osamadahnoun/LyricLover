@@ -182,25 +182,25 @@ var toptracks = function() {
             response.json().then(function(data) {
                 console.log(data)
             var artist1 = data.loved[0].strArtist;
-            var track1 = data.loved[0].strAlbum;
+            var track1 = data.loved[0].strTrack;
             var artist2 = data.loved[1].strArtist;
-            var track2 = data.loved[1].strAlbum;
+            var track2 = data.loved[1].strTrack;
             var artist3 = data.loved[2].strArtist;
-            var track3 = data.loved[2].strAlbum;
+            var track3 = data.loved[2].strTrack;
             var artist4 = data.loved[3].strArtist;
-            var track4 = data.loved[3].strAlbum;
+            var track4 = data.loved[3].strTrack;
             var artist5 = data.loved[4].strArtist;
-            var track5 = data.loved[4].strAlbum;
+            var track5 = data.loved[4].strTrack;
             var artist6 = data.loved[12].strArtist;
-            var track6 = data.loved[12].strAlbum;
+            var track6 = data.loved[12].strTrack;
             var artist7 = data.loved[6].strArtist;
-            var track7 = data.loved[6].strAlbum;
+            var track7 = data.loved[6].strTrack;
             var artist8 = data.loved[7].strArtist;
-            var track8 = data.loved[7].strAlbum;
-            var artist9 = data.loved[8].strArtist;
-            var track9 = data.loved[8].strAlbum;
-            var artist10 = data.loved[9].strArtist;
-            var track10 = data.loved[9].strAlbum;
+            var track8 = data.loved[7].strTrack;
+            var artist9 = data.loved[22].strArtist;
+            var track9 = data.loved[22].strTrack;
+            var artist10 = data.loved[23].strArtist;
+            var track10 = data.loved[23].strTrack;
 
             Song1El.textContent = track1 + " by " + artist1;
             Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);

@@ -59,8 +59,6 @@ var getSongs = function(albumId, artist) {
     }
     containerEl.appendChild(songsContainer)
   })
-
-
 };
 
 getInfo()

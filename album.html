@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <section class="hero is-info has-text-centered">
+  <section class="hero has-text-centered" id="header">
     <div class="hero-body">
         <p class="title">
             ☘️ LyricLover ☘️  
@@ -20,20 +20,26 @@
             The Best Application to Retrieve Lyrics from Your Favorite Artist's Songs!
         </p>
         <p class="subtitle">
-            Powered By <a href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and <a href="https://www.vagalume.com.br" target="_blank">vagalume.</a>
+            Powered By <a href="https://www.theaudiodb.com/" target="_blank" class="subtitle">TheAudioDB</a> and <a href="https://www.vagalume.com.br" target="_blank" class="subtitle">vagalume.</a>
         </p>
-        <button class="button is-success" onclick="location.href='./index.html'">Go Back To Main Page</button>
+        <button class="button is-success is-size-4-mobile is-size-5-tablet is-size-4-desktop" onclick="location.href='./index.html'">Go Back To Main Page</button>
     </div>
   </section>
 
   <main class="container">
     <div class = "album-header">
-      <div class="info">
+      <div class="album-info">
         <h1 class ="album"></h1>
         <h2 class="band"></h2>
       </div>
     </div>
   </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="subtitle">Tracks and Lyrics ❤️ Brought to You With Love</p>
+    <p class="subtitle" id="footer-lyricLover">By ☘️LyricLover☘️</p> 
+  </footer>
 
   
   <script src="./assets/js/album.js"></script>

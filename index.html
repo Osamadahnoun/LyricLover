@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="hero has-text-centered">
+    <section class="hero has-text-centered" id="header">
         <div class="hero-body">
             <p class="title">
                 ☘️ LyricLover ☘️  
@@ -20,7 +20,7 @@
                 The Best Application to Retrieve Lyrics from Your Favorite Artist's Songs!
             </p>
             <p class="subtitle">
-                Powered By <a href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and <a href="https://www.vagalume.com.br" target="_blank">vagalume.</a>
+                Powered By <a class ="subtitle" href="https://www.theaudiodb.com/" target="_blank">TheAudioDB</a> and <a class="subtitle" href="https://www.vagalume.com.br" target="_blank">vagalume.</a>
             </p>
         </div>
     </section>
@@ -33,11 +33,11 @@
             <div id="inputSection">
                 <form id="form">
                     <label id="name">
-                        Artist Name:
+                        <p class="formText">Artist Name:</p>
                     </label>
-                    <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist! Receive Their Top Songs!">
-                    <button id="submitBtn" class="button" type="button">
-                        <span id="search-btn-text">Search</span>
+                    <input  id="input" class="input is-info" type="text" placeholder="Your Favorite Artist!">
+                    <button id="submitBtn" class="button is-success is-size-4-mobile is-size-5-tablet is-size-4-desktop" type="button">
+                        <a href="#container">Search</a>
                     </button>
                 </form>
             </div>
@@ -80,7 +80,8 @@
 
     <!-- Footer -->
     <footer id="footer">
-      <p>Tracks and Lyrics ❤️ Brought to You With Love By ☘️LyricLover☘️</p> 
+      <p class="subtitle">Tracks and Lyrics ❤️ Brought to You With Love </p>
+      <p class="subtitle" id="footer-lyricLover"> By ☘️LyricLover☘️</p> 
     </footer>
   
     <script src="./assets/js/script.js"></script>    

@@ -7,7 +7,8 @@ var getInfo = function() {
   var artist= urlParams.get("artist");
   var song = urlParams.get("song");
 
-  titleEl.innerHTML = (artist+"/"+song).toUpperCase();
+  //titleEl.innerHTML = (artist+"/"+song).toUpperCase();
+  titleEl.innerHTML = (song.toUpperCase() + " by " + artist.toUpperCase());
 
   if (artist && song) {
     getLyrics(artist, song);

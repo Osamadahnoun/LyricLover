@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #262629;
     --text-color: white;
@@ -6,12 +10,13 @@
 
 html,
 body {
-    margin: 0;
+    margin: 0rem;
+    padding: 0rem;
     height: 100%;
     background-color: #9b9aa6;
 }
 
-.hero {
+#header {
     background-color: var(--primary-color);
     border: var(--section-border);
 }
@@ -24,8 +29,35 @@ body {
   color: var(--text-color);
 }
 
+.title {
+    color: var(--text-color);
+    font-size: 3.5rem
+}
+
+.subtitle {
+    color: var(--text-color);
+    font-size: 2.5rem
+}
+
+.button {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.formText {
+    color: var(--text-color);
+}
+
+
 .main {
     display: flex;
+    
 }
 
 .leftSection {
@@ -42,8 +74,8 @@ body {
 }
 
 #form {
-    padding: 35px;
-    margin: 20px;
+    padding: 3.5rem;
+    margin: 2rem;
     background-color: var(--primary-color);
     border: var(--section-border);
     border-radius: 12px;
@@ -56,8 +88,12 @@ body {
 }
 
 #input {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3em;
+    background-color: var(--text-color);
 }
 
 .button {
@@ -95,9 +131,8 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
-    
-    
+    align-items: center;
+    padding: 1rem;
 }
 
 .song {
@@ -119,8 +154,8 @@ body {
 #genre1,
 #genre2,
 #genre3 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #footer {
@@ -135,7 +170,12 @@ body {
     width:100%;
     height: 100px;
     font-weight: bolder;
-    font-size: 22px
+    font-size: 2.2rem;
+}
+
+#footer-lyricLover {
+    margin-bottom: 1.5rem;
+    margin-left: 5px;
 }
 
 .container {
@@ -165,24 +205,27 @@ body {
 .explicit {
   background-color: red;
   color: white;
-  padding: 2px 5px;
+  padding: .6rem .9rem;
   border-radius: 5px;
-  margin: 10px;
+  margin: 1rem;
+  font-size: 2rem;
 }
 
 .not-explicit {
   background-color: green;
   color:white;
-  padding: 2px 5px;
+  padding: .6rem .9rem;
   border-radius: 5px;
-
+  margin: 1rem;
+  font-size: 2rem;
 }
 
 .lyrics {
   width: 50%;
   text-align: center;
-  margin:  30px auto 50px auto;
+  margin:  3rem auto 5rem auto;
   font-family: Arial,sans-serif;
+  font-size: 2rem;
 }
 
 .songsContainer {
@@ -196,17 +239,10 @@ body {
   flex-direction: row-reverse;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-
-
-.albumSong {
-  background-color: #48c78e;
-  color: white;
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 5px;
-}
 
 .thumbnail {
   border:gray 2px solid;
@@ -214,50 +250,227 @@ body {
 
 /* Media Queries */
 
-@media only screen and (max-width: 460px) {
-    
-    #footer {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    bottom:0px;
-    width:100%;
-    background: var(--primary-color); 
-      }
+/* largest desktop viewports */
+@media only screen and (min-width: 1200px) {
 
-    .info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: 275px;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color);
     }
 
-    .album{
-      margin-left:15px;
-    }
-}
-
-@media only screen and (max-width: 615px) {
-    
-    #footer {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    bottom:0px;
-    width:100%;
-    background: var(--primary-color); 
-      }
-    
     .main {
-        margin-bottom: 20px;
-    }
-
-    .info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        margin-bottom: 2rem;
     }
     
 }
 
+/* smaller desktop viewports */
+@media only screen and (max-width: 1199px) {
 
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        top: 275px;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color);
+    }
 
+    .main {
+        margin-bottom: 2rem;
+    }
+    
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
+}
+
+/* tablet viewports */
+@media only screen and (max-width: 991px) {
+    
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color);
+        position: inherit; 
+    }
+                    
+    .main {
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+                
+    .leftSection {
+        min-width: 100%;
+    }
+
+    #genresContainer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+                    
+    .rightSection {
+        min-width: 95%;
+        margin-left: 2rem;
+    }
+                
+}
+
+/* larger cell viewports */
+@media only screen and (max-width: 540px) {
+    
+    #header {
+        max-width: 100%;
+        padding: 5px 10px 0 10px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    #form,
+    #genres {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formText {
+        font-size: 24px;
+    }
+    
+    #genresContainer {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 33px;
+    }
+
+    #album,
+    #trend,
+    #loved {
+        margin: 10px 0;
+    }
+
+    #container {
+        width: 90%;
+    }
+
+    #submitBtn,
+    #album,
+    #trend,
+    #loved,
+    #song1,
+    #song2,
+    #song3,
+    #song4,
+    #song5,
+    #song6,
+    #song7,
+    #song8,
+    #song9,
+    #song10 {
+        display: flex;
+        align-items: stretch;
+    }
+   
+    .leftSection {
+        min-width: 100%;
+    }
+                    
+    .rightSection {
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
+        margin-left: 20px;
+    }
+
+    #leftSongColumn {
+        padding: 10px 0 0 0;
+    }
+
+    #rightSongColumn {
+        padding: 0 0 10px 0;
+    }
+                    
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        bottom:0rem;
+        width:100%;
+        background: var(--primary-color); 
+    }
+
+    .info {
+        font-size: 25px;
+    }
+
+    .lyrics {
+        width: 85%;
+        font-size: 14px;
+        margin: 1.5rem auto 5rem auto;
+    }
+
+    .album-header {
+        max-width: 90%;
+    }
+
+    .thumbnail {
+        height: 125px;
+        width: 125px;
+    }
+
+    .album-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 7px;
+    }
+
+    .album {
+        font-size: 25px;
+    }
+
+    .band {
+        font-size: 20px;
+    }
+                    
+}
+
+/* smallest cell viewports */
+@media only screen and (max-width: 324px) {
+
+    .title {
+        font-size: 3rem;
+    }
+
+    #container {
+        width: 50%;
+    }
+
+    .rightSection {
+        min-width: 87%;
+        
+    }
+}

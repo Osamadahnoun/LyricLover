@@ -145,6 +145,7 @@ body {
 
 #footer-lyricLover {
     margin-bottom: 1.5rem;
+    margin-left: 5px;
 }
 
 .container {
@@ -493,7 +494,7 @@ body {
         display: flex;
         flex-direction: column;
         min-width: 90%;
-        margin-left: 2rem;
+        margin-left: 20px;
     }
 
     #leftSongColumn {

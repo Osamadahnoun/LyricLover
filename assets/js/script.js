@@ -202,34 +202,34 @@ var toptracks = function() {
             var artist10 = data.loved[9].strArtist;
             var track10 = data.loved[9].strAlbum;
 
-            Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song1El.textContent = track1 + " by " + artist1;
             Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);
 
-            Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song2El.textContent = track2 + " by " + artist2;
             Song2El.setAttribute("href", "./single.html?artist="+artist2+"&song="+track2);
 
-            Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song3El.textContent = track3 + " by " + artist3;
             Song3El.setAttribute("href", "./single.html?artist="+artist3+"&song="+track3);
 
-            Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song4El.textContent = track4 + " by " + artist4;
             Song4El.setAttribute("href", "./single.html?artist="+artist4+"&song="+track4);
 
-            Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song5El.textContent = track5 + " by " + artist5;
             Song5El.setAttribute("href", "./single.html?artist="+artist5+"&song="+track5);
 
-            Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            Song6El.textContent = track6 + " by " + artist6;
             Song6El.setAttribute("href", "./single.html?artist="+artist6+"&song="+track6);
 
-            Song7El.textContent = "7. Artist: " + artist7 + ", Track: " + track7;
+            Song7El.textContent = track7 + " by " + artist7;
             Song7El.setAttribute("href", "./single.html?artist="+artist7+"&song="+track7);
 
-            Song8El.textContent = "8. Artist: " + artist8 + ", Track: " + track8;
+            Song8El.textContent = track8 + " by " + artist8;
             Song8El.setAttribute("href", "./single.html?artist="+artist8+"&song="+track8);
 
-            Song9El.textContent = "9. Artist: " + artist9 + ", Track: " + track9;
+            Song9El.textContent = track9 + " by " + artist9;
             Song9El.setAttribute("href", "./single.html?artist="+artist9+"&song="+track9);
 
-            Song10El.textContent = "10. Artist: " + artist10 + ", Track: " + track10;
+            Song10El.textContent = track10 + " by " + artist10;
             Song10El.setAttribute("href", "./single.html?artist="+artist10+"&song="+track10);
             
     })

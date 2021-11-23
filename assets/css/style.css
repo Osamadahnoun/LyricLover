@@ -3,8 +3,8 @@
 }
 
 :root {
-    --primary-color:#1b2f8a;
-    --text-color: #d6a728; 
+    --primary-color: #241f1c;
+    --text-color: silver; 
 }
 
 html,
@@ -13,11 +13,11 @@ body {
     padding: 0rem;
     height: 100%;
     font-size: 62.5%;
-    background-color: var(--text-color);
+    background: linear-gradient(silver, #6c7a86)
 }
 
 #header {
-    background-color: var(--primary-color);
+    background: linear-gradient(darkgrey, var(--primary-color))
 }
 
 .title {
@@ -83,7 +83,7 @@ a {
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 3em;
-    background-color: var(--text-color);
+    background: linear-gradient(var(--text-color), white);
 }
 
 #genresContainer {
@@ -99,7 +99,7 @@ a {
     display: flex;
     width: 50%;
     justify-content: space-evenly;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 1.2rem;
     margin: 2rem 2rem 2rem 0;
     align-items: center;
@@ -141,7 +141,7 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: var(--primary-color);
+    background: linear-gradient(var(--primary-color), darkgrey);
     color: var(--text-color);
     bottom: 0rem;
     height: 10rem;
@@ -235,7 +235,7 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
+    
         }
 
     .main {
@@ -254,7 +254,6 @@ a {
         justify-content: center;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
     }
         
     .main {
@@ -276,7 +275,6 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
     }
 
     .main {
@@ -299,7 +297,7 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
+
         
     }
 
@@ -325,7 +323,6 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
     }
 
     .main {
@@ -347,7 +344,7 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
+
     }
 
     .main {
@@ -363,7 +360,6 @@ a {
         flex-wrap: wrap;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
         justify-content: center;
     }
                     
@@ -384,7 +380,6 @@ a {
         flex-wrap: wrap;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
     }
                     
     .main {
@@ -516,7 +511,6 @@ a {
         flex-wrap: wrap;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
     }
 
     .info {

@@ -420,6 +420,10 @@ body {
         margin: 10px 0;
     }
 
+    #container {
+        width: 90%;
+    }
+
     #submitBtn,
     #album,
     #trend,
@@ -445,7 +449,8 @@ body {
     .rightSection {
         display: flex;
         flex-direction: column;
-        min-width: 100%;
+        min-width: 90%;
+        margin-left: 20px;
     }
 
     #leftSongColumn {
@@ -505,5 +510,14 @@ body {
 
     .title {
         font-size: 3rem;
+    }
+
+    #container {
+        width: 50%;
+    }
+
+    .rightSection {
+        min-width: 87%;
+        
     }
 }

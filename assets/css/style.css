@@ -339,6 +339,10 @@ a {
         padding: 5px 10px 0 10px;
     }
 
+    .title {
+        font-size: 2.2rem;
+    }
+
     .subtitle {
         font-size: 13px;
     }
@@ -350,11 +354,24 @@ a {
         margin-bottom: 2rem;
     }
 
-    #form,
     #genres {
         display: flex;
         flex-direction: column;
         align-items: stretch;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    #input {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 1em;
     }
 
     .formText {
@@ -426,6 +443,10 @@ a {
         font-size: 25px;
     }
 
+    .explicit {
+        font-size: 1rem;
+    }
+
     .lyrics {
         width: 85%;
         font-size: 14px;
@@ -462,7 +483,7 @@ a {
 @media only screen and (max-width: 324px) {
 
     .title {
-        font-size: 3rem;
+        font-size: 1.9rem;
     }
 
     #container {

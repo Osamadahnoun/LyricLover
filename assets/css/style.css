@@ -4,7 +4,8 @@
 
 :root {
     --primary-color: #262629;
-    --text-color: white;
+    --text-color: silver;
+    --secondary-color: #6c7a86;
     --section-border: 2px solid black;
 }
 
@@ -13,11 +14,11 @@ body {
     margin: 0rem;
     padding: 0rem;
     height: 100%;
-    background-color: #9b9aa6;
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
 }
 
 #header {
-    background-color: var(--primary-color);
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
     border: var(--section-border);
 }
 
@@ -92,8 +93,8 @@ a {
     margin-bottom: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 3em;
-    background-color: var(--text-color);
+    font-size: 1rem;
+    background: linear-gradient(var(--text-color), white);
 }
 
 .button {
@@ -164,7 +165,7 @@ a {
     justify-content: center;
     align-items: center;
     /*position:absolute;*/
-    background: var(--primary-color);
+    background: linear-gradient(var(--primary-color) , var(--secondary-color));
     color: var(--text-color);
     bottom:0px;
     width:100%;
@@ -261,7 +262,7 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
+        
     }
 
     .main {
@@ -282,7 +283,6 @@ a {
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
-        background: var(--primary-color);
     }
 
     .main {
@@ -306,7 +306,6 @@ a {
         flex-wrap: wrap;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color);
         position: inherit; 
     }
                     
@@ -436,7 +435,6 @@ a {
         flex-wrap: wrap;
         bottom:0rem;
         width:100%;
-        background: var(--primary-color); 
     }
 
     .info {

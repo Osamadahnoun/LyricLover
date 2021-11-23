@@ -230,6 +230,7 @@ a {
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        justify-content: center;
         top: 275px;
         bottom:0rem;
         width:100%;
@@ -241,6 +242,7 @@ a {
         margin-bottom: 2rem;
     }
 
+    
 }
 
 @media only screen and (min-width: 800px) {
@@ -249,6 +251,7 @@ a {
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        justify-content: center;
         bottom:0rem;
         width:100%;
         background: var(--primary-color); 
@@ -258,6 +261,9 @@ a {
         margin-bottom: 2rem;
     }
 
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -266,17 +272,44 @@ a {
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        justify-content: center;
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
         background: var(--primary-color);
-        justify-content: space-evenly;
     }
 
     .main {
         margin-bottom: 2rem;
     }
 
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        bottom:0rem;
+        width:100%;
+        margin-top: 2rem;
+        background: var(--primary-color);
+        
+    }
+
+    .main {
+        margin-bottom: 2rem;
+    }
+
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
 }
 
             
@@ -286,6 +319,7 @@ a {
     #footer {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         position: relative;
         top: 275px;
         bottom:0rem;
@@ -298,6 +332,9 @@ a {
         margin-bottom: 2rem;
     }
     
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -327,12 +364,17 @@ a {
         bottom:0rem;
         width:100%;
         background: var(--primary-color); 
+        justify-content: center;
     }
                     
     .main {
         margin-bottom: 2rem;
     }
                     
+    #footer-lyricLover {
+        margin-left: .75rem;
+    }
+
 }
 
 @media only screen and (max-width: 770px) {

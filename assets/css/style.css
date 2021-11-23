@@ -33,6 +33,12 @@ body {
 .button {
     color: var(--text-color);
     background-color: var(--secondary-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .formText {

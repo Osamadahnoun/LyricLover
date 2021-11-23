@@ -123,7 +123,6 @@ var topAlbums = function() {
             Song9El.setAttribute("href", "./album.html?artist="+data.loved[8].strArtist+"&album="+data.loved[8].strAlbum+"&id="+data.loved[8].idAlbum);
             Song10El.textContent = album10 + " by " + artist10;
             Song10El.setAttribute("href", "./album.html?artist="+data.loved[9].strArtist+"&album="+data.loved[9].strAlbum+"&id="+data.loved[9].idAlbum);
-           
 })
     }
 }) 

@@ -215,6 +215,8 @@ a {
   flex-direction: row-reverse;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 
@@ -224,97 +226,28 @@ a {
 
 /* Media Queries */
 
-@media only screen and (min-width: 771px) {
+/* largest desktop viewports */
+@media only screen and (min-width: 1200px) {
 
     #footer {
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        justify-content: center;
         top: 275px;
         bottom:0rem;
         width:100%;
         margin-top: 2rem;
         background: var(--primary-color);
-        }
+    }
 
     .main {
         margin-bottom: 2rem;
     }
-
     
 }
 
-@media only screen and (min-width: 800px) {
-    
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: center;
-        bottom:0rem;
-        width:100%;
-        background: var(--primary-color); 
-    }
-        
-    .main {
-        margin-bottom: 2rem;
-    }
-
-    #footer-lyricLover {
-        margin-left: .75rem;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: center;
-        bottom:0rem;
-        width:100%;
-        margin-top: 2rem;
-        background: var(--primary-color);
-    }
-
-    .main {
-        margin-bottom: 2rem;
-    }
-
-    #footer-lyricLover {
-        margin-left: .75rem;
-    }
-
-}
-
-@media only screen and (min-width: 1050px) {
-
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: center;
-        bottom:0rem;
-        width:100%;
-        margin-top: 2rem;
-        background: var(--primary-color);
-        
-    }
-
-    .main {
-        margin-bottom: 2rem;
-    }
-
-    #footer-lyricLover {
-        margin-left: .75rem;
-    }
-}
-
-            
-
-@media only screen and (min-width: 1150px) {
+/* smaller desktop viewports */
+@media only screen and (max-width: 1199px) {
 
     #footer {
         display: flex;
@@ -337,54 +270,20 @@ a {
     }
 }
 
-@media only screen and (min-width: 1500px) {
+/* tablet viewports */
+@media only screen and (max-width: 991px) {
+    
+    .subtitle {
+        font-size: 2rem;
+    }
 
     #footer {
         display: flex;
         flex-wrap: wrap;
-        position: relative;
-        top: 275px;
         bottom:0rem;
         width:100%;
-        margin-top: 2rem;
         background: var(--primary-color);
-    }
-
-    .main {
-        margin-bottom: 2rem;
-    }
-    
-}
-
-@media only screen and (max-width: 800px) {
-    
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        bottom:0rem;
-        width:100%;
-        background: var(--primary-color); 
-        justify-content: center;
-    }
-                    
-    .main {
-        margin-bottom: 2rem;
-    }
-                    
-    #footer-lyricLover {
-        margin-left: .75rem;
-    }
-
-}
-
-@media only screen and (max-width: 770px) {
-    
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        bottom:0rem;
-        width:100%;
-        background: var(--primary-color); 
+        position: inherit; 
     }
                     
     .main {
@@ -395,41 +294,21 @@ a {
     .leftSection {
         min-width: 100%;
     }
+
+    #genresContainer {
+        display: flex;
+        justify-content: space-evenly;
+    }
                     
     .rightSection {
-        min-width: 90%;
-        margin-left: 3rem;
+        min-width: 95%;
+        margin-left: 2rem;
     }
                 
 }
-
-/*@media only screen and (max-width: 460px) {
-    
-    #footer {
-        display: flex;
-        flex-wrap: wrap;
-        bottom:0rem;
-        width:100%;
-        background: var(--primary-color); 
-    }
-                    
-    .leftSection {
-        min-width: 100%;
-    }
-                    
-    .rightSection {
-        min-width: 100%;
-    }
-                    
-    .main {
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
-    }
-                    
-}*/
 
 /* larger cell viewports */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 540px) {
     
     #header {
         max-width: 100%;

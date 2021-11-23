@@ -153,17 +153,17 @@ var trending = function() {
                 var artist6 = data.trending[5].strArtist
 
 
-            Song1El.textContent = "1. Artist: " + artist1 + ", Track: " + track1;
+            Song1El.textContent = track1 + " by " + artist1;
             Song1El.setAttribute("href", "./single.html?artist="+artist1+"&song="+track1);
-            Song2El.textContent = "2. Artist: " + artist2 + ", Track: " + track2;
+            Song2El.textContent = track2 + " by " + artist2;
             Song2El.setAttribute("href", "./single.html?artist="+artist2+"&song="+track2);
-            Song3El.textContent = "3. Artist: " + artist3 + ", Track: " + track3;
+            Song3El.textContent = track3 + " by " + artist3;
             Song3El.setAttribute("href", "./single.html?artist="+artist3+"&song="+track3);
-            Song4El.textContent = "4. Artist: " + artist4 + ", Track: " + track4;
+            Song4El.textContent = track4 + " by " + artist4;
             Song4El.setAttribute("href", "./single.html?artist="+artist4+"&song="+track4);
-            Song5El.textContent = "5. Artist: " + artist5 + ", Track: " + track5;
+            Song5El.textContent = track5 + " by " + artist5;
             Song5El.setAttribute("href", "./single.html?artist="+artist5+"&song="+track5);
-            Song6El.textContent = "6. Artist: " + artist6 + ", Track: " + track6;
+            Song6El.textContent = track6 + " by " + artist6;
             Song6El.setAttribute("href", "./single.html?artist="+artist6+"&song="+track6);
             
     })

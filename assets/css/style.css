@@ -348,7 +348,8 @@ body {
     }
                     
     .rightSection {
-        min-width: 100%;
+        min-width: 90%;
+        margin-left: 3rem;
     }
                 
 }
@@ -445,7 +446,8 @@ body {
     .rightSection {
         display: flex;
         flex-direction: column;
-        min-width: 100%;
+        min-width: 90%;
+        margin-left: 2rem;
     }
 
     #leftSongColumn {

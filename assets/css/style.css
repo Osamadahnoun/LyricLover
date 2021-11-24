@@ -189,16 +189,19 @@ a {
   font-size: 45px;
   max-width: 100%;
   margin-left: 5px;
+  color: var(--text-color);
 }
 
 .album {
   font-weight: bold;
   font-size: 45px;
+  color: var(--text-color);
 }
 
 .band {
   font-weight: bold;
   font-size: 25px;
+  color: var(--text-color);
 }
 
 .explicit {
@@ -225,6 +228,7 @@ a {
   margin:  3rem auto 5rem auto;
   font-family: Arial,sans-serif;
   font-size: 2rem;
+  color: var(--text-color);
 }
 
 .songsContainer {

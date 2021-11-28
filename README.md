@@ -8,6 +8,11 @@
 * CSS
 * JavaScript
 
+## Technologies Used
+* Bulma CSS FrameWork
+* TheAudioDB API
+* Vagalume API
+
 ## Link to Deployed Application
 https://osamadahnoun.github.io/LyricLover/
 

@@ -318,23 +318,73 @@ var loadArtists = function() {
 
 var getSongsHistory = function() {
     artist1.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
         getArtistSongs(artist1.textContent);
     })
 
     artist2.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
         getArtistSongs(artist2.textContent)
     })
 
     artist3.addEventListener('click', function() {
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
         getArtistSongs(artist3.textContent)
     })
 
     artist4.addEventListener('click', function() {
-        getArtistSongs(artist3.textContent)
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
+        getArtistSongs(artist4.textContent)
     })
 
     artist5.addEventListener('click', function() {
-        getArtistSongs(artist3.textContent)
+        Song1El.textContent = ''
+        Song2El.textContent = ''
+        Song3El.textContent = ''
+        Song4El.textContent = ''
+        Song5El.textContent = ''
+        Song6El.textContent = ''
+        Song7El.textContent = ''
+        Song8El.textContent = ''
+        Song9El.textContent = ''
+        Song10El.textContent = ''
+        getArtistSongs(artist5.textContent)
     })
 }
 

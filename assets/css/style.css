@@ -143,36 +143,36 @@ a {
 }
 
 #artist1 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
 #artist2 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
 #artist3 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
 #artist4 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
 #artist5 {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
@@ -206,6 +206,10 @@ a {
 #genre3 {
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+#searchHistoryButtons {
+    display: flex;
 }
 
 #footer {
@@ -379,6 +383,24 @@ a {
     .rightSection {
         min-width: 95%;
         margin-left: 2rem;
+    }
+
+    #storageContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+
+    #searchHistoryText {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    #searchHistoryButtons {
+        flex-direction: column;
+        display: flex;
     }
 
                 

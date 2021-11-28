@@ -126,6 +126,39 @@ a {
     align-items: center;
 }
 
+#storageContainer {
+    display: inline-flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    border: var(--section-border);
+    margin: 1.25rem;
+    padding: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#artist1 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+#artist2 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+#artist3 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
 .songColumn {
     display: inline-flex;
     flex-wrap: wrap;

@@ -1,5 +1,6 @@
 // Global Variables for submit button element/song title container element/input element
 var submitBtn = document.querySelector('#submitBtn');
+var historyBtn = document.querySelector('#historyBtn');
 var container = document.querySelector('#container');
 var input = document.querySelector('#input');
 var albums = document.querySelector('#album');
@@ -18,9 +19,14 @@ var Song8El = document.querySelector('#song8');
 var Song9El = document.querySelector('#song9');
 var Song10El = document.querySelector('#song10');
 
+
+var artist1 = document.querySelector('#artist1');
+var artist2 = document.querySelector('#artist2');
+var artist3 = document.querySelector('#artist3');
+
 // This function fetches data from API and prints it to screen through changing each song element's text content 
 var getArtistSongs = function(firstName) {
-  console.log(firstName)
+//   console.log(firstName)
     var apiUrl = 'https://theaudiodb.p.rapidapi.com/track-top10.php?s=' + firstName
     fetch(apiUrl, {
 	    "method": "GET",
@@ -32,7 +38,7 @@ var getArtistSongs = function(firstName) {
     .then(function(response) {
         if(response.ok) {
             response.json().then(function(data) {
-                console.log(data)
+                // console.log(data)
                 // console.log(data.track.length)
                 var song1 = data.track[0].strTrack
                 Song1El.textContent = song1
@@ -270,6 +276,7 @@ var trendingButton = function() {
     })
 }
 
+let searchHistory = [];
 // This functiion gives the button element functionality to run the getArtistSongs with the input.value parameter. It also clears the previous inputs song names
 var inputArtistNameButton = function() {
     submitBtn.addEventListener('click', function() {
@@ -284,8 +291,36 @@ var inputArtistNameButton = function() {
         Song9El.textContent = ''
         Song10El.textContent = ''
         getArtistSongs(input.value);
+        let artist = input.value;
+        console.log(artist);
+        searchHistory.push(artist);
+        console.log(searchHistory);
+        localStorage.setItem('ArtistName:', searchHistory);
+    })
+
+    historyBtn.addEventListener('click', function() {
+        artist1.textContent = searchHistory[0].toUpperCase();
+        artist2.textContent = searchHistory[1].toUpperCase();
+        artist3.textContent = searchHistory[2].toUpperCase();
+    })
+
+}
+
+var getSongsHistory = function() {
+    artist1.addEventListener('click', function() {
+        getArtistSongs(artist1.textContent);
+    })
+
+    artist2.addEventListener('click', function() {
+        getArtistSongs(artist2.textContent)
+    })
+
+    artist3.addEventListener('click', function() {
+        getArtistSongs(artist3.textContent)
     })
 }
+
+
 
 var topTracksButton = function() {
     lovedEl.addEventListener('click', function() {
@@ -300,5 +335,7 @@ topAlbumsButton();
 trendingButton();
 
 topTracksButton();
+
+getSongsHistory();
 
 

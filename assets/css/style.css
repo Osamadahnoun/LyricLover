@@ -127,8 +127,8 @@ a {
 }
 
 #storageContainer {
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     background-color: var(--primary-color);
     border-radius: 12px;
     border: var(--section-border);
@@ -136,6 +136,10 @@ a {
     padding: 1.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+#searchFont {
+ font-size: 1.5rem;
 }
 
 #artist1 {
@@ -153,6 +157,20 @@ a {
 }
 
 #artist3 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+#artist4 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+#artist5 {
     margin-left: 5rem;
     margin-right: 5rem;
     padding-left: 2.5rem;
@@ -362,6 +380,7 @@ a {
         min-width: 95%;
         margin-left: 2rem;
     }
+
                 
 }
 

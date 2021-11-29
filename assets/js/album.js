@@ -13,7 +13,7 @@ var getInfo = function() {
   albumEl.innerHTML = album.toUpperCase();
   bandEl.innerHTML =  "by " + artist.toUpperCase();
 
-  var albumUrl = "https://theaudiodb.com/api/v1/json/1/album.php?m=" + albumId;
+  var albumUrl = "https://theaudiodb.com/api/v1/json/2/album.php?m=" + albumId;
 
   fetch(albumUrl)
     .then(function(response){
@@ -40,10 +40,10 @@ var getInfo = function() {
 };
 
 var getSongs = function(albumId, artist) {
-  console.log(albumId)
-  var albumUrl = "https://theaudiodb.com/api/v1/json/1/track.php?m=" + albumId
+  var albumUrl = "https://theaudiodb.com/api/v1/json/2/track.php?m=" + albumId
   fetch(albumUrl)
   .then(function(response){
+    console.log(response)
     return response.json();
   })
   .then(function(data){
